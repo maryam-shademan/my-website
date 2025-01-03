@@ -28,7 +28,104 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="w-full h-full bg-gray-900 dark:bg-gray-200">
+          <header className="lg:px-16 px-4 flex flex-wrap items-center py-4 shadow-lg">
+            <div className="flex-1 flex justify-between items-center">
+              <img
+                className="sm:w-[10rem] w-[7rem]"
+                src="/public/assets/img/unnamed.jpg"
+                alt="Logo"
+              />
+            </div>
+            <label htmlFor="menu-toggle" className="cursor-pointer md:hidden block">
+              <svg
+                className="fill-current text-gray-800"
+                xmlns="http://www.w3.org/2000/svg"
+                width={20}
+                height={20}
+                viewBox="0 0 20 20"
+              >
+                <title>menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
+            </label>
+            <input className="hidden" type="checkbox" id="menu-toggle" />
+            <div className="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+              <nav>
+                <ul className="md:flex items-center justify-between text-base text-gray-100 dark:text-gray-600 pt-4 md:pt-0">
+                  <li>
+                    <a className="md:p-4 py-3 px-0 block text-rose-500" href="#">
+                      صفحه اصلی
+                    </a>
+                  </li>
+                  <li>
+                    <a className="md:p-4 py-3 px-0 block" href="#">
+                      درباره من
+                    </a>
+                  </li>
+                  <li>
+                    <a className="md:p-4 py-3 px-0 block" href="#">
+                      مهارت های من
+                    </a>
+                  </li>
+                  <li>
+                    <a className="md:p-4 py-3 px-0 block" href="#">
+                      اشعار من
+                    </a>
+                  </li>
+                  <li>
+                    <a className="md:p-4 py-3 px-0 block" href="#">
+                      پروژه هایی که انحام دادم
+                    </a>
+                  </li>
+                  <li>
+                    <a className="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="#">
+                      تماس بامن
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+          <div className="h-full w-full mx-auto relative top-12 pb-20 xl:px-16 px-8 flex md:flex-row flex-col gap-4 justify-center items-center pb-10 pt-4">
+            <div className="w-full relative">
+              <img
+                className="shadow-2xl shadow-rose-600 animate-[spin_12s_linear_infinite] absolute left-0 right-0 rounded-full lg:max-w-[60%] max-w-[60%] mx-auto"
+                src="/assets/img/BG1007871www.tiktarh.com_.jpg"
+                alt="My Image"
+              />
+              <img
+                className="relative z-10 rounded-full lg:max-w-[60%] max-w-[60%] mx-auto outline outline-[.7rem] outline-offset-[.1rem] outline-rose-400/30"
+                src="/assets/img/unnamed.jpg"
+                alt="My Image"
+              />
+            </div>
+            <div className="w-full flex flex-col justify-center gap-4 md:text-left text-center text-white dark:text-gray-800 md:mt-0 sm:mt-8 mt-4">
+              <h1 className="md:text-4xl sm:text-3xl text-2xl font-semibold font-serif">
+                سلام من مریم شادمان هستم
+              </h1>
+              <h3 className="capitalize text-rose-400">
+
+                <span className="typing text-green-500 dark:text-green-700">
+                  فرانت اند و دیتاساینس
+                </span>
+              </h3>
+              <p>
+                برنامه نویس فرانت و دیتا ساینس علاقمند به تجربه به فریمورک های مختلف و کار با لایبری های مختلف
+                سرچ کردن متداول جت پیدا کردن سوالات خود
+              </p>
+              <div className="sm:mt-4 mt-2">
+                <button className="px-6 py-1 bg-rose-500 text-white rounded-sm">
+                  بیشتر راجبم بدون
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <main className="">
+          {children}
+        </main>
       </body>
     </html>
   );
